@@ -706,7 +706,7 @@
 <section id="publications">
   <div class="section-label">04 — Publications</div>
   <div class="section-title">What I've<br><em style="font-style:italic;color:var(--gold)">Written</em></div>
-  <div class="pub-card reveal">
+  <div class="pub-card">
     <div>
       <div class="pub-title">Discipline — The Most Misunderstood Word of Our Generation</div>
       <div class="pub-desc">An original article exploring what discipline really means for teenagers in 2026 — cutting through social media's distorted portrayal to reveal how small, consistent actions create extraordinary results.</div>
@@ -747,14 +747,8 @@
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
   reveals.forEach(el => observer.observe(el));
-
-  // Add reveal class to sections
-  document.querySelectorAll('section > *:not(.section-label)').forEach((el, i) => {
-    el.classList.add('reveal');
-    el.style.transitionDelay = `${i * 0.1}s`;
-  });
 </script>
 
 </body>

@@ -737,7 +737,7 @@
       <div class="stat-label">Instagram Followers</div>
     </div>
     <div style="background:var(--card);padding:48px 32px;">
-      <div class="stat-number" style="font-size:56px;" data-target="4">0</div>
+      <div class="stat-number" style="font-size:56px;" data-target="4000000">0</div>
       <div class="stat-label" style="margin-top:4px;">Million+ Content Reach</div>
     </div>
     <div style="background:var(--card);padding:48px 32px;">
@@ -816,7 +816,9 @@
         start = target;
         clearInterval(timer);
       }
-      if (target >= 1000) {
+      if (target >= 1000000) {
+        el.textContent = (start / 1000000).toFixed(1) + 'M+';
+      } else if (target >= 1000) {
         el.textContent = Math.floor(start).toLocaleString();
       } else {
         el.textContent = Math.floor(start);

@@ -522,6 +522,17 @@
     text-transform: uppercase;
   }
 
+  /* FADE UP SCROLL ANIMATION */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -602,7 +613,7 @@
     <div class="about-text">
       <p>Based in Dubai with a passion for <strong>machine learning, AI, and building things that matter.</strong> Currently in Year 12 studying Mathematics, Physics, Computer Science, and Business at A-Level.</p>
       <p>IGCSE School Topper with 6 A* grades and recipient of the <strong>Matthew Burfield Scholarship for Academic Excellence.</strong> Outside academics, a competitive 100m and 200m sprinter pursuing national level competition.</p>
-      <p>Completed ML and AI certifications from <strong>Kaggle and Anthropic,</strong> with two ML projects on GitHub and an educational Instagram page with <strong>37,000+ followers</strong> and over 4 million in reach.</p>
+      <p>Completed ML and AI certifications from <strong>Kaggle and Anthropic,</strong> with two ML projects on GitHub and an educational Instagram page with <strong>40,000+ followers</strong> and over 4 million in reach.</p>
       <p>Focused on building systems that improve how people <strong>train, learn, and perform at scale.</strong></p>
     </div>
     <div class="about-facts">
@@ -631,6 +642,10 @@
         <span class="fact-value">1st ME/Gulf · 6th Global — BSME/BSO Arabic</span>
       </div>
       <div class="fact-row">
+        <span class="fact-label">Awards</span>
+        <span class="fact-value">Student of Year · Outstanding Econ · Outstanding Arabic</span>
+      </div>
+      <div class="fact-row">
         <span class="fact-label">Focus</span>
         <span class="fact-value">ML · AI · Data Science</span>
       </div>
@@ -647,7 +662,8 @@
   <div class="section-label">02 — Projects</div>
   <div class="section-title">What I've<br><em style="font-style:italic;color:var(--gold)">Built</em></div>
   <div class="projects-grid">
-    <a href="https://github.com/aptf09/sprint-predictor" target="_blank" class="project-card">
+    <a href="https://github.com/aptf09/sprint-predictor" target="_blank" class="project-card fade-up">
+      <div class="project-number">01 / 03</div>
       <div class="project-title">100m Sprint Time Predictor</div>
       <div class="project-desc">A Random Forest regression model that predicts 100m sprint times based on athlete training, lifestyle, and physical metrics. Built with a 150-row synthetic dataset grounded in sports science.</div>
       <div class="project-tags">
@@ -660,8 +676,8 @@
       <div class="project-metric-label">Mean Absolute Error</div>
       <span class="project-link">View on GitHub →</span>
     </a>
-    <a href="https://github.com/aptf09/grade-predictor" target="_blank" class="project-card">
-      <div class="project-number">02 / 02</div>
+    <a href="https://github.com/aptf09/grade-predictor" target="_blank" class="project-card fade-up" style="animation-delay:0.15s">
+      <div class="project-number">02 / 03</div>
       <div class="project-title">Student Grade Predictor</div>
       <div class="project-desc">An ML model predicting upcoming test grades based on sleep, revision hours, diet, hydration, and more. Trained on a 300-row dataset with realistic academic relationships.</div>
       <div class="project-tags">
@@ -674,6 +690,25 @@
       <div class="project-metric-label">MAE — marks out of 100</div>
       <span class="project-link">View on GitHub →</span>
     </a>
+    <div class="project-card fade-up" style="animation-delay:0.3s;cursor:default;grid-column:span 2;">
+      <div class="project-number">03 / 03 — IN DEVELOPMENT</div>
+      <div class="project-title">FlowDose — Performance Hydration</div>
+      <div class="project-desc">A hardware startup solving athlete hydration. A premium electrolyte water bottle with a built-in push-to-dispense mechanism — one press releases one pill directly into your water. No separate tube, no spills, no broken pills. Full business plan, customer persona, and validation survey live. Built on a razor-and-blades model targeting serious athletes aged 16–40.</div>
+      <div class="project-tags">
+        <span class="project-tag">Hardware</span>
+        <span class="project-tag">Product Design</span>
+        <span class="project-tag">Entrepreneurship</span>
+        <span class="project-tag">CAD</span>
+        <span class="project-tag">D2C</span>
+      </div>
+      <div style="display:flex;gap:48px;align-items:flex-end;margin-top:16px;">
+        <div>
+          <div class="project-metric" style="font-size:24px;">"All your excuses, gone."</div>
+          <div class="project-metric-label">Active validation — survey live</div>
+        </div>
+        <a href="https://forms.gle/aVY5qkVfVoZiRzYR8" target="_blank" class="project-link" style="position:relative;bottom:auto;right:auto;">Take the Survey →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -749,7 +784,7 @@
   <div class="section-title">By The<br><em style="font-style:italic;color:var(--gold)">Numbers</em></div>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
     <div style="background:var(--card);padding:48px 32px;">
-      <div class="stat-number" style="font-size:56px;" data-target="37000">0</div>
+      <div class="stat-number" style="font-size:56px;" data-target="40000">0</div>
       <div class="stat-label">Instagram Followers</div>
     </div>
     <div style="background:var(--card);padding:48px 32px;">
@@ -811,16 +846,35 @@
 </footer>
 
 <script>
-  // Scroll reveal
+  // Scroll reveal for .reveal elements
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.05 });
-  reveals.forEach(el => observer.observe(el));
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // Fade up for project cards, cert cards, section titles
+  const fadeEls = document.querySelectorAll('.fade-up, .cert-card, .pub-card, .section-title, .about-grid, .fact-row');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, i * 80);
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeEls.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    fadeObserver.observe(el);
+  });
 
   // Animated counters
   function animateCounter(el, target, duration = 1500) {

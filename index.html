@@ -638,6 +638,10 @@
         <span class="fact-value">100m & 200m Sprinting</span>
       </div>
       <div class="fact-row">
+        <span class="fact-label">Experience</span>
+        <span class="fact-value">Technology Intern · 4i Apps (ERP/Logistics)</span>
+      </div>
+      <div class="fact-row">
         <span class="fact-label">Competition</span>
         <span class="fact-value">1st ME/Gulf · 6th Global — BSME/BSO Arabic</span>
       </div>
@@ -660,17 +664,27 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">02 — Projects</div>
-  <div class="section-title">What I've<br><em style="font-style:italic;color:var(--gold)">Built</em></div>
+  <div class="section-title">Human Performance<br><em style="font-style:italic;color:var(--gold)">Modelling</em></div>
+  <p style="font-size:14px;color:var(--grey);max-width:600px;line-height:1.8;margin-bottom:48px;">I explore machine learning applications across athletic and academic performance — using data to model how humans train, learn, and improve. Each project follows a full ML pipeline: data engineering, preprocessing, model selection, validation, and interpretation.</p>
   <div class="projects-grid">
     <a href="https://github.com/aptf09/sprint-predictor" target="_blank" class="project-card fade-up">
       <div class="project-number">01 / 03</div>
       <div class="project-title">100m Sprint Time Predictor</div>
-      <div class="project-desc">A Random Forest regression model that predicts 100m sprint times based on athlete training, lifestyle, and physical metrics. Built with a 150-row synthetic dataset grounded in sports science.</div>
+      <div class="project-desc">A Random Forest regression model predicting 100m sprint times from athlete training, lifestyle, and physical metrics. Dataset: 150 synthetic athlete profiles grounded in sports science research. Methodology: train/test split, Random Forest regression, MAE validation.</div>
+      <div style="margin:16px 0;padding:12px;border-left:2px solid var(--gold);background:#0f0f0f;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:6px;">WHY THIS MATTERS</div>
+        <div style="font-size:12.5px;color:var(--grey);line-height:1.6;">Quantifying how lifestyle factors affect athletic output gives athletes and coaches a data-driven foundation for performance decisions — beyond intuition alone.</div>
+      </div>
+      <div style="margin:16px 0;padding:12px;border-left:2px solid #222;background:#0f0f0f;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--grey);margin-bottom:6px;">KEY INSIGHT</div>
+        <div style="font-size:12.5px;color:var(--grey);line-height:1.6;">Sleep quality and reaction time were the strongest predictors of sprint performance — outweighing raw strength metrics. Analysis stage took longer than the coding itself.</div>
+      </div>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">Scikit-learn</span>
         <span class="project-tag">Pandas</span>
         <span class="project-tag">Random Forest</span>
+        <span class="project-tag">Synthetic Dataset</span>
       </div>
       <div class="project-metric">0.12s</div>
       <div class="project-metric-label">Mean Absolute Error</div>
@@ -679,12 +693,21 @@
     <a href="https://github.com/aptf09/grade-predictor" target="_blank" class="project-card fade-up" style="animation-delay:0.15s">
       <div class="project-number">02 / 03</div>
       <div class="project-title">Student Grade Predictor</div>
-      <div class="project-desc">An ML model predicting upcoming test grades based on sleep, revision hours, diet, hydration, and more. Trained on a 300-row dataset with realistic academic relationships.</div>
+      <div class="project-desc">A Random Forest regression model predicting upcoming test grades from lifestyle and academic inputs. Dataset: 300 synthetic student profiles with realistic academic relationships. Methodology: categorical encoding, train/test split, Random Forest regression, MAE validation.</div>
+      <div style="margin:16px 0;padding:12px;border-left:2px solid var(--gold);background:#0f0f0f;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:6px;">WHY THIS MATTERS</div>
+        <div style="font-size:12.5px;color:var(--grey);line-height:1.6;">Understanding which lifestyle factors most influence academic performance gives students a data-backed framework for improving results — not just generic study advice.</div>
+      </div>
+      <div style="margin:16px 0;padding:12px;border-left:2px solid #222;background:#0f0f0f;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--grey);margin-bottom:6px;">KEY INSIGHT</div>
+        <div style="font-size:12.5px;color:var(--grey);line-height:1.6;">Replacing an AI-generated dataset with a properly engineered one dropped MAE from 16.41 to 4.15 — demonstrating that data quality matters far more than model complexity.</div>
+      </div>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">Scikit-learn</span>
         <span class="project-tag">Pandas</span>
         <span class="project-tag">Random Forest</span>
+        <span class="project-tag">Synthetic Dataset</span>
       </div>
       <div class="project-metric">4.15</div>
       <div class="project-metric-label">MAE — marks out of 100</div>
@@ -707,6 +730,43 @@
           <div class="project-metric-label">Active validation — survey live</div>
         </div>
         <a href="https://forms.gle/aVY5qkVfVoZiRzYR8" target="_blank" class="project-link" style="position:relative;bottom:auto;right:auto;">Take the Survey →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">02.5 — Skills</div>
+  <div class="section-title">What I<br><em style="font-style:italic;color:var(--gold)">Know</em></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
+    <div style="background:var(--card);padding:32px;">
+      <div class="cert-issuer">Languages</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">SQL</span>
+        <span class="project-tag">Pseudocode</span>
+        <span class="project-tag">HTML</span>
+      </div>
+    </div>
+    <div style="background:var(--card);padding:32px;">
+      <div class="cert-issuer">ML & AI</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+        <span class="project-tag">Scikit-learn</span>
+        <span class="project-tag">Pandas</span>
+        <span class="project-tag">Random Forest</span>
+        <span class="project-tag">XGBoost</span>
+        <span class="project-tag">Prompt Engineering</span>
+      </div>
+    </div>
+    <div style="background:var(--card);padding:32px;">
+      <div class="cert-issuer">Tools & Platforms</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+        <span class="project-tag">GitHub</span>
+        <span class="project-tag">PyCharm</span>
+        <span class="project-tag">Kaggle</span>
+        <span class="project-tag">Notion</span>
+        <span class="project-tag">Canva</span>
       </div>
     </div>
   </div>
